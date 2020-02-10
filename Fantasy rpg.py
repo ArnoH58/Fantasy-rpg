@@ -1,46 +1,5 @@
 import time
-from os import system, name 
-from colorama import init,Fore, Back, Style
 
-def clear(): 
-    # for windows 
-    if name == 'nt': 
-        _ = system('cls') 
-    # for mac and linux(here, os.name is 'posix') 
-    else: 
-        _ = system('clear')
-
-def intro():
-    clear()
-    init()
-    frames = [
-        [
-            "    .)",
-            "   //%\\",
-            "  ((%(%)",
-            " .-'..`-.",
-            " `-'.'`-'dd"
-            ],
-        [
-            "    (.",
-            "   /%/\\",
-            "  (%(%))",
-            " .-'..`-.",
-            " `-'.'`-'dd"
-            ]
-    ]
-    for i in range(1,20):
-        frame = frames[i % 2]
-        clear()
-        print(Style.RESET_ALL)
-        print(Fore.YELLOW + frame[0])
-        print(Fore.YELLOW + frame[1])
-        print(Fore.RED + frame[2])
-        print(Style.DIM + Fore.WHITE + frame[3])
-        print(Style.DIM + Fore.WHITE + frame[4])
-        time.sleep(0.5)
-        
-    print(Style.RESET_ALL)
 
 def main():
 
@@ -115,9 +74,11 @@ def main():
         exit
 
 
-if __name__ == "__main__":
-    intro()
-    main()
+
+
+
+
+main()
 
 
 
